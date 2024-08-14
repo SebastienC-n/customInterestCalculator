@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interest Calculator</h1>
+        <form id="loan-form">
+            <label for="principal">Principal ($):</label>
+            <input type="number" id="principal" step="0.01" required>
+
+            <label for="interest-type">Interest Type:</label>
+            <select id="interest-type">
+                <option value="simple">Simple Interest</option>
+                <option value="compound">Compound Interest</option>
+                <option value="variable">Variable Interest</option>
+            </select>
+
+            <label for="annual-rate">Annual Interest Rate (%):</label>
+            <input type="number" id="annual-rate" step="0.01" required>
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" required>
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" required>
+
+            <h2>Separate Payments</h2>
+            <div id="separate-payments">
+                <!-- Separate payments will be added here -->
+            </div>
+            <button type="button" id="add-payment">Add Separate Payment</button>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="results">
+            <h2>Results</h2>
+            <p id="monthly-payment">Monthly Payment: $0.00</p>
+            <p id="total-payment">Total Payment: $0.00</p>
+            <p id="total-interest">Total Interest: $0.00</p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
